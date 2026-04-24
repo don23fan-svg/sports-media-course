@@ -766,6 +766,371 @@
   </div>
 </div>
 
+<!-- COURSE PREVIEW -->
+<section id="preview" style="padding:0; background: var(--ink); border-top: 0.5px solid rgba(245,242,235,0.08);">
+
+  <div style="padding: 80px 48px 0; border-bottom: 0.5px solid rgba(245,242,235,0.1);">
+    <div class="section-header reveal" style="border-color: rgba(245,242,235,0.1);">
+      <span class="section-num" style="color:var(--accent);">00</span>
+      <h2 class="section-title" style="color:var(--paper);">Try a Free Lesson</h2>
+    </div>
+    <p style="color:rgba(245,242,235,0.6); font-size:15px; max-width:560px; margin: -32px 0 48px; line-height:1.7;">
+      This is a sample from Module 1. The real course goes much deeper — but this gives you a feel for the format and the level of thinking involved.
+    </p>
+  </div>
+
+  <!-- THE PREVIEW APP -->
+  <div id="preview-app" style="min-height: 520px; padding: 48px;">
+
+    <!-- PROGRESS BAR -->
+    <div style="display:flex; align-items:center; gap:16px; margin-bottom:48px;">
+      <span style="font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.15em; text-transform:uppercase; color:rgba(245,242,235,0.3);">Module 1 Preview</span>
+      <div style="flex:1; height:2px; background:rgba(245,242,235,0.08); border-radius:2px; overflow:hidden;">
+        <div id="progress-bar" style="height:100%; background:var(--accent); width:0%; transition:width 0.5s ease; border-radius:2px;"></div>
+      </div>
+      <span id="progress-label" style="font-family:'DM Mono',monospace; font-size:10px; color:rgba(245,242,235,0.3);">0 / 4</span>
+    </div>
+
+    <!-- SLIDE CONTAINER -->
+    <div id="slide-container" style="max-width:720px; margin:0 auto;">
+
+      <!-- SLIDE 0: INTRO -->
+      <div class="preview-slide" id="slide-0">
+        <div style="display:inline-block; font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.15em; text-transform:uppercase; color:var(--accent); border:0.5px solid var(--accent); padding:4px 12px; margin-bottom:28px;">The Six D's of Disruption</div>
+        <h3 style="font-family:'Bebas Neue',sans-serif; font-size:clamp(40px,5vw,64px); line-height:0.95; color:var(--paper); letter-spacing:0.02em; margin-bottom:24px;">Once Something<br>Goes Digital,<br><span style="color:var(--accent);">Everything Changes.</span></h3>
+        <p style="font-size:16px; color:rgba(245,242,235,0.7); line-height:1.75; max-width:580px; margin-bottom:40px;">Diamandis identifies a six-stage chain reaction that plays out every time a technology becomes digital. It's predictable, it's unstoppable — and it's happening to sports media right now. Let's walk through it.</p>
+        <button onclick="nextSlide()" class="preview-btn">Start the Lesson →</button>
+      </div>
+
+      <!-- SLIDE 1: THE SIX D's VISUAL -->
+      <div class="preview-slide" id="slide-1" style="display:none;">
+        <div style="display:inline-block; font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.15em; text-transform:uppercase; color:var(--accent); border:0.5px solid var(--accent); padding:4px 12px; margin-bottom:28px;">Concept</div>
+        <h3 style="font-family:'Bebas Neue',sans-serif; font-size:clamp(32px,4vw,52px); line-height:1; color:var(--paper); letter-spacing:0.02em; margin-bottom:32px;">The Six D's Chain Reaction</h3>
+        <div id="sixd-chain" style="display:flex; flex-wrap:wrap; gap:0; margin-bottom:36px;">
+        </div>
+        <p style="font-size:14px; color:rgba(245,242,235,0.6); line-height:1.7; max-width:600px; margin-bottom:36px;">This chain has already played out in <strong style="color:var(--paper);">music, photography, publishing, and maps</strong>. It's now mid-chain in sports media. The question isn't <em>if</em> — it's <em>where are we right now?</em></p>
+        <button onclick="nextSlide()" class="preview-btn">See it applied to sports →</button>
+      </div>
+
+      <!-- SLIDE 2: SPORTS APPLICATION -->
+      <div class="preview-slide" id="slide-2" style="display:none;">
+        <div style="display:inline-block; font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.15em; text-transform:uppercase; color:var(--accent); border:0.5px solid var(--accent); padding:4px 12px; margin-bottom:28px;">Sports Application</div>
+        <h3 style="font-family:'Bebas Neue',sans-serif; font-size:clamp(28px,3.5vw,44px); line-height:1; color:var(--paper); letter-spacing:0.02em; margin-bottom:28px;">Sports Broadcasting<br>Through the Six D's</h3>
+        <div id="sports-chain" style="margin-bottom:36px;"></div>
+        <p style="font-size:14px; color:rgba(245,242,235,0.6); line-height:1.7; max-width:600px; margin-bottom:36px;">The <strong style="color:var(--accent);">Deceptive phase</strong> is the most dangerous — it's where incumbents get blindsided. Early doublings look tiny and easy to dismiss. By the time it's obvious, the disruption window has already closed.</p>
+        <button onclick="nextSlide()" class="preview-btn">Test your understanding →</button>
+      </div>
+
+      <!-- SLIDE 3: QUIZ -->
+      <div class="preview-slide" id="slide-3" style="display:none;">
+        <div style="display:inline-block; font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.15em; text-transform:uppercase; color:var(--accent); border:0.5px solid var(--accent); padding:4px 12px; margin-bottom:28px;">Quick Check</div>
+        <h3 style="font-family:'Bebas Neue',sans-serif; font-size:clamp(28px,3.5vw,44px); line-height:1; color:var(--paper); letter-spacing:0.02em; margin-bottom:28px;">Which D Are We In?</h3>
+        <p style="font-size:15px; color:rgba(245,242,235,0.75); line-height:1.7; margin-bottom:32px; max-width:600px;">AI-generated sports highlights cost nearly zero to produce. A single platform can generate thousands of personalized clips per game automatically. Traditional highlight producers are losing contracts. <strong style="color:var(--paper);">Where does AI sports content sit in the Six D's right now?</strong></p>
+        <div id="quiz-options" style="display:flex; flex-direction:column; gap:10px; max-width:540px; margin-bottom:32px;"></div>
+        <div id="quiz-feedback" style="display:none; padding:20px 24px; border-left:3px solid var(--accent); background:rgba(232,57,14,0.08); margin-bottom:28px; max-width:540px;">
+          <p id="quiz-feedback-text" style="font-size:14px; color:rgba(245,242,235,0.85); line-height:1.7; margin:0;"></p>
+        </div>
+        <button id="quiz-next-btn" onclick="nextSlide()" class="preview-btn" style="display:none;">See what's next in the course →</button>
+      </div>
+
+      <!-- SLIDE 4: CTA -->
+      <div class="preview-slide" id="slide-4" style="display:none; text-align:center; padding: 20px 0 40px;">
+        <div style="font-size:48px; margin-bottom:20px;">✓</div>
+        <h3 style="font-family:'Bebas Neue',sans-serif; font-size:clamp(36px,4vw,56px); line-height:1; color:var(--paper); letter-spacing:0.02em; margin-bottom:16px;">That's Module 1.<br><span style="color:var(--accent);">There Are 7 More.</span></h3>
+        <p style="font-size:16px; color:rgba(245,242,235,0.65); line-height:1.75; max-width:520px; margin:0 auto 16px;">Each module builds on this framework — covering AI tools, sports business economics, content automation, fan data strategy, and the ethics no one talks about. All taught by someone who works in it every day.</p>
+        <p style="font-family:'DM Mono',monospace; font-size:12px; color:rgba(245,242,235,0.35); margin-bottom:36px; letter-spacing:0.05em;">Summer 2026 · 20 seats · $99 beta price</p>
+        <a href="#register" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'});return false;" class="preview-btn" style="display:inline-block; text-decoration:none;">Reserve My Spot →</a>
+      </div>
+
+    </div><!-- /slide-container -->
+  </div><!-- /preview-app -->
+
+</section>
+
+<style>
+  .preview-btn {
+    display: inline-block;
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 14px 28px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    font-weight: 500;
+  }
+  .preview-btn:hover { background: #c22f0a; transform: translateY(-1px); }
+
+  .sixd-pill {
+    display: flex;
+    align-items: center;
+    gap: 0;
+  }
+
+  .d-card {
+    padding: 14px 18px;
+    border: 0.5px solid rgba(245,242,235,0.12);
+    background: rgba(245,242,235,0.04);
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(10px);
+    min-width: 90px;
+  }
+  .d-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .d-card.highlighted {
+    background: rgba(232,57,14,0.12);
+    border-color: var(--accent);
+  }
+  .d-label {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    color: var(--paper);
+    letter-spacing: 0.03em;
+    display: block;
+  }
+  .d-sub {
+    font-size: 10px;
+    font-family: 'DM Mono', monospace;
+    color: rgba(245,242,235,0.4);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    display: block;
+    margin-top: 2px;
+  }
+  .d-arrow {
+    color: rgba(245,242,235,0.2);
+    font-size: 14px;
+    padding: 0 4px;
+    padding-top: 6px;
+  }
+
+  .sports-row {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 0.5px solid rgba(245,242,235,0.07);
+    align-items: start;
+    opacity: 0;
+    transform: translateX(-12px);
+    transition: all 0.4s ease;
+  }
+  .sports-row.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .sports-d {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.03em;
+    color: var(--accent);
+    padding-top: 2px;
+  }
+  .sports-desc {
+    font-size: 13px;
+    color: rgba(245,242,235,0.65);
+    line-height: 1.55;
+  }
+  .sports-desc strong { color: var(--paper); }
+
+  .quiz-opt {
+    padding: 14px 20px;
+    border: 0.5px solid rgba(245,242,235,0.15);
+    background: rgba(245,242,235,0.03);
+    color: rgba(245,242,235,0.75);
+    font-size: 14px;
+    font-family: 'DM Sans', sans-serif;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.2s;
+    line-height: 1.5;
+  }
+  .quiz-opt:hover { border-color: rgba(245,242,235,0.4); background: rgba(245,242,235,0.07); color: var(--paper); }
+  .quiz-opt.correct { border-color: #34c759; background: rgba(52,199,89,0.1); color: #34c759; }
+  .quiz-opt.wrong { border-color: rgba(232,57,14,0.5); background: rgba(232,57,14,0.07); color: rgba(245,242,235,0.4); }
+  .quiz-opt:disabled { cursor: default; }
+
+  .preview-slide { animation: slideIn 0.4s ease; }
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 768px) {
+    #preview-app { padding: 32px 20px; }
+    #preview > div:first-child { padding: 60px 20px 0; }
+    .d-card { min-width: 70px; padding: 10px 12px; }
+    .d-label { font-size: 18px; }
+  }
+</style>
+
+<script>
+(function() {
+  var currentSlide = 0;
+  var totalSlides = 4;
+  var quizAnswered = false;
+
+  var sixDs = [
+    { d: "Digitization",      sub: "Becomes data" },
+    { d: "Deception",         sub: "Looks small" },
+    { d: "Disruption",        sub: "Incumbents fall" },
+    { d: "Demonetization",    sub: "Cost drops to zero" },
+    { d: "Dematerialization", sub: "Physical disappears" },
+    { d: "Democratization",   sub: "Everyone gets access" }
+  ];
+
+  var sportsRows = [
+    {
+      d: "Digitization",
+      desc: "<strong>Game footage becomes data</strong> — every frame is a data input. AI can now read it automatically."
+    },
+    {
+      d: "Deception",
+      desc: "<strong>2018-2021:</strong> AI highlights exist but look robotic. Easy to dismiss as a novelty that will never scale."
+    },
+    {
+      d: "Disruption",
+      desc: "<strong>2022-present:</strong> Rights holders cut editorial teams. AI platforms handle thousands of clips per game. Broadcasters lose contracts."
+    },
+    {
+      d: "Demonetization",
+      desc: "<strong>Cost of a highlight drops from $200+ to ~$0.003.</strong> Production budgets collapse. The economics permanently change."
+    },
+    {
+      d: "Dematerialization",
+      desc: "<strong>Edit bays, tape suites, production trucks</strong> — dematerializing into cloud software and algorithms."
+    },
+    {
+      d: "Democratization",
+      desc: "<strong>A D-III school</strong> can now produce the same quality highlight content as an NFL team. The tool is the same. The access is equal."
+    }
+  ];
+
+  var quizOptions = [
+    { text: "Digitization — sports content is just starting to go digital", correct: false },
+    { text: "Disruption / Demonetization — incumbents are falling, costs are collapsing", correct: true },
+    { text: "Democratization — everyone already has equal access to AI tools", correct: false },
+    { text: "Deception — AI highlights are still too primitive to matter", correct: false }
+  ];
+
+  window.nextSlide = function() {
+    currentSlide++;
+    showSlide(currentSlide);
+    updateProgress();
+  };
+
+  function showSlide(n) {
+    var slides = document.querySelectorAll(".preview-slide");
+    for (var i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    var el = document.getElementById("slide-" + n);
+    if (el) {
+      el.style.display = "block";
+      if (n === 1) buildSixDs();
+      if (n === 2) buildSportsChain();
+      if (n === 3) buildQuiz();
+    }
+  }
+
+  function updateProgress() {
+    var pct = (currentSlide / totalSlides) * 100;
+    var bar = document.getElementById("progress-bar");
+    var label = document.getElementById("progress-label");
+    if (bar) bar.style.width = pct + "%";
+    if (label) label.textContent = currentSlide + " / " + totalSlides;
+  }
+
+  function buildSixDs() {
+    var container = document.getElementById("sixd-chain");
+    if (!container) return;
+    container.innerHTML = "";
+    for (var i = 0; i < sixDs.length; i++) {
+      (function(item, idx) {
+        var card = document.createElement("div");
+        card.className = "d-card";
+        card.innerHTML = "<span class=\"d-label\">" + item.d + "</span><span class=\"d-sub\">" + item.sub + "</span>";
+        container.appendChild(card);
+        if (idx < sixDs.length - 1) {
+          var arrow = document.createElement("div");
+          arrow.className = "d-arrow";
+          arrow.textContent = ">";
+          container.appendChild(arrow);
+        }
+        setTimeout(function() { card.classList.add("visible"); }, idx * 130);
+      })(sixDs[i], i);
+    }
+  }
+
+  function buildSportsChain() {
+    var container = document.getElementById("sports-chain");
+    if (!container) return;
+    container.innerHTML = "";
+    for (var i = 0; i < sportsRows.length; i++) {
+      (function(row, idx) {
+        var el = document.createElement("div");
+        el.className = "sports-row";
+        var dClass = (idx === 1 || idx === 2) ? "sports-d highlighted" : "sports-d";
+        el.innerHTML = "<div class=\"" + dClass + "\">" + row.d + "</div><div class=\"sports-desc\">" + row.desc + "</div>";
+        container.appendChild(el);
+        setTimeout(function() { el.classList.add("visible"); }, idx * 110);
+      })(sportsRows[i], i);
+    }
+  }
+
+  function buildQuiz() {
+    var container = document.getElementById("quiz-options");
+    if (!container) return;
+    container.innerHTML = "";
+    quizAnswered = false;
+    for (var i = 0; i < quizOptions.length; i++) {
+      (function(opt) {
+        var btn = document.createElement("button");
+        btn.className = "quiz-opt";
+        btn.textContent = opt.text;
+        btn.setAttribute("data-correct", opt.correct ? "true" : "false");
+        btn.onclick = function() { handleAnswer(opt.correct, btn); };
+        container.appendChild(btn);
+      })(quizOptions[i]);
+    }
+  }
+
+  function handleAnswer(isCorrect, clickedBtn) {
+    if (quizAnswered) return;
+    quizAnswered = true;
+    var opts = document.querySelectorAll(".quiz-opt");
+    for (var i = 0; i < opts.length; i++) {
+      opts[i].disabled = true;
+      if (opts[i].getAttribute("data-correct") === "true") {
+        opts[i].classList.add("correct");
+      } else if (opts[i] === clickedBtn && !isCorrect) {
+        opts[i].classList.add("wrong");
+      }
+    }
+    var feedback = document.getElementById("quiz-feedback");
+    var feedbackText = document.getElementById("quiz-feedback-text");
+    if (feedback) feedback.style.display = "block";
+    if (feedbackText) {
+      if (isCorrect) {
+        feedbackText.innerHTML = "Correct. AI sports content is mid-chain right now — deep into Disruption and Demonetization simultaneously. Production costs have collapsed, major broadcasters are losing ground, and the incumbents who dismissed it as a toy in 2019 are now scrambling. Democratization is next — and it is already starting.";
+      } else {
+        feedbackText.innerHTML = "Not quite. AI highlights are well past Digitization and Deception. We are currently in Disruption and Demonetization — costs have collapsed and incumbents are already losing ground. Democratization is the next stage, but we are not fully there yet.";
+      }
+    }
+    var nextBtn = document.getElementById("quiz-next-btn");
+    if (nextBtn) nextBtn.style.display = "inline-block";
+  }
+
+})();
+</script>
+
+
 <!-- WHO IT'S FOR -->
 <section>
   <div class="section-header reveal">
